@@ -10,6 +10,8 @@ title: contamiNation
    integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
    crossorigin=""></script>
    #mapid { height: 180px; }
-   
+
 ---
- <div id="mapid"></div>
+ <div id="mapid">
+var mymap = L.map('mapid').setView([39.82, 98.58], 4);
+ </div>
