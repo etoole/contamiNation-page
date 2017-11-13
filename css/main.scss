@@ -3,6 +3,11 @@
 ---
 @charset "utf-8";
 
+#mapid {
+  height: 800px;
+  width: 800px;
+  position: relative;}
+
 // Helpers
 @import
   'helpers/variables',
