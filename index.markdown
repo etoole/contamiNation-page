@@ -12,4 +12,6 @@ title: contamiNation
    #mapid { height: 180px; }
    
 ---
- <div id="mapid"></div>
+ <div id="mapid">
+var mymap = L.map('mapid').setView([39.82, 98.58], 4);
+</div>
