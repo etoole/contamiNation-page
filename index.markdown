@@ -14,6 +14,10 @@ title: contamiNation
 ---
  <div id="mapid">
  <script>
-var mymap = L.map('mapid').setView([39.82, 98.58], 4);
+var mymap = L.map('mapid').setView([39.82, 98.58], 4); L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={pk.eyJ1IjoiZXRvb2xlIiwiYSI6ImNqOXhnZDZyejd1YnEyd2xnaXAzbTh3emYifQ.T7wJfqXiDlt8oky37rLdrQ} , attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>', 
+  maxZoom: 12,
+  id: 'mapbox.streets-satellite',
+  accessToken: 'pk.eyJ1IjoiZXRvb2xlIiwiYSI6ImNqOXhnZDZyejd1YnEyd2xnaXAzbTh3emYifQ.T7wJfqXiDlt8oky37rLdrQ'
+  }).addTo(mymap);
  </script>
 </div>
