@@ -4627,6 +4627,16 @@ var geojsonFeature = [
 ];
 L.geoJSON(geojsonFeature).addTo(mymap);
 	      
+L.geoJSON(states, {
+    style: function(feature) {
+        switch (feature.properties.markercolor) {
+	    case 'Green':   return {color: "#04ff00"};
+	    case 'Yellow':   return {color: "#fffa00"};
+            case 'Red': return {color: "#ff0000"};
+        }
+    }
+}).addTo(map);
+	      
       </script>
 
   </div>
