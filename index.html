@@ -49,17 +49,20 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 }).addTo(mymap);
 
 var geojsonFeature = {
-	{"type": "Feature",
+        "type": "Feature",
         "geometry": {
             "type": "Point",
-	"properties": {
+            "coordinates": [
+                48.0763383,
+                -122.1952879
+            ]
+        },
+        "properties": {
             "name": "QUIL CEDA VILLAGE",
             "pwsid": "105300116"
-        },
-        "coordinates": [48.0763383, -122.1952879]
         }
     };
-	      
+
 L.geoJSON(geojsonFeature).addTo(mymap);
 	      
       </script>
