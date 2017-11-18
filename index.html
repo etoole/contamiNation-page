@@ -4633,7 +4633,10 @@ L.geoJSON(geojsonFeature, {
 	    case 'Yellow':   return {color: "#fffa00"};
             case 'Red': return {color: "#ff0000"};
         }
-    }
+    },
+	        onEachFeature: function (feature, layer) {
+        layer.bindPopup(feature.properties.name);
+    },
 }).addTo(mymap);
 	      
       </script>
