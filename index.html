@@ -50,7 +50,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 }).addTo(mymap);
 
 var geojsonLayer = new L.GeoJSON.AJAX("markers.json");       
-geojsonLayer.addTo(map);
+geojsonLayer.addTo(mymap);
 	      
 L.geoJSON(geojsonFeature, {
 	onEachFeature: function (feature, layer) {
