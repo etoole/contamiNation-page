@@ -49,12 +49,12 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 	id: 'mapbox.streets-satellite'
 }).addTo(mymap);
 
-function addDataToMap(data, mymap) {
+function addDataToMap(data, map) {
     var dataLayer = L.geoJson(data);
     dataLayer.addTo(map);
 }
 
-$.getJSON("markers.json", function(data) { addDataToMap(data, map); });
+$.getJSON("markers.json", function(data) { addDataToMap(data, mymap); });
 	      
 L.geoJSON(geojsonFeature, {
 	onEachFeature: function (feature, layer) {
