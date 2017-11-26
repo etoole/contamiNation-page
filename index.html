@@ -49,19 +49,69 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 	id: 'mapbox.streets-satellite'
 }).addTo(mymap);
 
-function addDataToMap(data, map) {
-    var dataLayer = L.geoJson(data, {
-        onEachFeature: function(feature, layer) {
-            var popupText = "Magnitude: " + feature.properties.name
-                + "<br>Location: " + feature.properties.pwsid
-                + "<br><a href='" + feature.properties.markercolor + "'>More info</a>";
-            layer.bindPopup(popupText); }
-        });
-    dataLayer.addTo(map);
-}
+var geojsonFeature = [    
+	{
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -121.27661,
+                37.8227046
+            ]
+        },
+        "properties": {
+            "name": "CITY OF LATHROP",
+            "pwsid": "CA3910015",
+            "markercolor": "Green"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -121.2732167,
+                37.6805086
+            ]
+        },
+        "properties": {
+            "name": "SAN JOAQUIN RIVER CLUB INC",
+            "pwsid": "CA3910018",
+            "markercolor": "Green"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -121.09257,
+                38.018742
+            ]
+        },
+        "properties": {
+            "name": "LINDEN COUNTY WATER DISTRICT",
+            "pwsid": "CA3910019",
+            "markercolor": "Green"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -121.25422,
+                38.0086654
+            ]
+        },
+        "properties": {
+            "name": "STOCKTON VERDE MOBILE HOME PARK",
+            "pwsid": "CA3910020",
+            "markercolor": "Green"
+        }
+    }]
 
-$.getJSON("markers.json", function(data) { addDataToMap(data, mymap); });
-	      
+L.geoJSON(geojsonFeature).addTo(mymap);
       </script>
 
   </div>
