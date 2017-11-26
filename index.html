@@ -42,9 +42,9 @@
     <div id="map"></div>
       <script>
 	      
-L.mapbox.accessToken = 'pk.eyJ1IjoiZXRvb2xlIiwiYSI6ImNqOXhnZDZyejd1YnEyd2xnaXAzbTh3emYifQ.T7wJfqXiDlt8oky37rLdrQ';
+L.mapbox.accessToken = 'pk.eyJ1IjoiZXRvb2xlIiwiYSI6ImNqOXhneGhiMDgxd3MzMnM0MWtqZ3BpMzEifQ.g1OtFeVOLGfArIgHc_ymqg';
 var map = L.mapbox.map('map', 'mapbox.streets')
-    setView([39.8283, -98.5795], 3);
+    .setView([39.8283, -98.5795], 3);
 
 // As with any other AJAX request, this technique is subject to the Same Origin Policy:
 // http://en.wikipedia.org/wiki/Same_origin_policy
@@ -52,19 +52,7 @@ var map = L.mapbox.map('map', 'mapbox.streets')
 // delivering it should support CORS.
 var featureLayer = L.mapbox.featureLayer()
     .loadURL('/mapbox.js/assets/data/example-single.geojson')
-    .addTo(map);
-	      
-	      
-	      
-var mymap = L.map('mapid').setView([39.8283, -98.5795], 3);
-
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZXRvb2xlIiwiYSI6ImNqOXhneGhiMDgxd3MzMnM0MWtqZ3BpMzEifQ.g1OtFeVOLGfArIgHc_ymqg', {
-	maxZoom: 18,
-	attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-		'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-		'Imagery © <a href="http://mapbox.com">Mapbox</a>',
-	id: 'etoole.cjah96azi1juu2wpb78lzl8xs-5xzza'
-}).addTo(mymap);
+    .addTo(map)
 
       </script>
 
