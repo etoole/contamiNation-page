@@ -41,7 +41,7 @@
       <script>
 var mymap = L.map('mapid').setView([39.8283, -98.5795], 3);
 
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZXRvb2xlIiwiYSI6ImNqOXhneGhiMDgxd3MzMnM0MWtqZ3BpMzEifQ.g1OtFeVOLGfArIgHc_ymqg', {
+L.tileLayer('https://api.tiles.mapbox.com/v4/etoole.cjah96azi1juu2wpb78lzl8xs-5xzza/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZXRvb2xlIiwiYSI6ImNqOXhneGhiMDgxd3MzMnM0MWtqZ3BpMzEifQ.g1OtFeVOLGfArIgHc_ymqg', {
 	maxZoom: 18,
 	attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
 		'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -49,69 +49,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 	id: 'mapbox.streets-satellite'
 }).addTo(mymap);
 
-var geojsonFeature = [    
-	{
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -121.27661,
-                37.8227046
-            ]
-        },
-        "properties": {
-            "name": "CITY OF LATHROP",
-            "pwsid": "CA3910015",
-            "markercolor": "Green"
-        }
-    },
-    {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -121.2732167,
-                37.6805086
-            ]
-        },
-        "properties": {
-            "name": "SAN JOAQUIN RIVER CLUB INC",
-            "pwsid": "CA3910018",
-            "markercolor": "Green"
-        }
-    },
-    {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -121.09257,
-                38.018742
-            ]
-        },
-        "properties": {
-            "name": "LINDEN COUNTY WATER DISTRICT",
-            "pwsid": "CA3910019",
-            "markercolor": "Green"
-        }
-    },
-    {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -121.25422,
-                38.0086654
-            ]
-        },
-        "properties": {
-            "name": "STOCKTON VERDE MOBILE HOME PARK",
-            "pwsid": "CA3910020",
-            "markercolor": "Green"
-        }
-    }]
 
-L.geoJSON("markers.json").addTo(mymap);
       </script>
 
   </div>
