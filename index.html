@@ -56,7 +56,7 @@ function addDataToMap(data, map) {
 
 $.getJSON("markers.json", function(data) { addDataToMap(data, mymap); });
 	      
-L.geoJSON(geojsonFeature, {
+L.geoJSON(dataLayer, {
 	onEachFeature: function (feature, layer) {
         layer.bindPopup(feature.properties.name);
     }
