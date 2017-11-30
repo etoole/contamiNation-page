@@ -11,7 +11,7 @@
             "title": "RIVERDALE ESTATES",
             "pwsid": "CA3301040",
             "icon": {
-        "iconUrl": "drinking-water-15.svg",
+        "iconUrl": "red-drinking-water-15.svg",
         "iconSize": [15,15]
       }
         }
@@ -29,7 +29,7 @@
             "title": "BLYTHE MOBILE HOME ESTATES",
             "pwsid": "CA3301045",
             "icon": {
-        "iconUrl": "red-drinking-water-15.png",
+        "iconUrl": "yellow-drinking-water-15.svg",
         "iconSize": [15,15]
       }
         }
@@ -47,7 +47,7 @@
             "title": "VILLAGE OF CHILD HELP",
             "pwsid": "CA3301055",
             "icon": {
-        "iconUrl": "drinking-water-15.svg",
+        "iconUrl": "green-drinking-water-15.svg",
         "iconSize": [15,15]
       }
     }
