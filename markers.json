@@ -10,6 +10,7 @@
         "properties": {
             "title": "RIVERDALE ESTATES",
             "pwsid": "CA3301040",
+            "marker-color": "#18bc2e",
             "icon": {
         "iconUrl": "https://cdn2.iconfinder.com/data/icons/maki/100/police-16.png"
       }
