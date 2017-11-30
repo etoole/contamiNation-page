@@ -26,7 +26,7 @@
             "title": "BLYTHE MOBILE HOME ESTATES",
             "pwsid": "CA3301045",
             "icon": {
-        "iconUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE1IDE1Ij4KICA8dGl0bGU+ZHJpbmtpbmctd2F0ZXItMTU8L3RpdGxlPgogIDxwYXRoIGQ9Ik02LDFBMiwyLDAsMCwwLDQsM1Y2LjVhMC41LDAuNSwwLDAsMCwuNS41aDJBMC41LDAuNSwwLDAsMCw3LDYuNXYtMkEwLjUsMC41LDAsMCwxLDcuNSw0SDE0VjFINloiLz4KICA8cGF0aCBkPSJNNywxNUg0YTAuNSwwLjUsMCwwLDEtLjQ4LTAuMzhMMiw4LjYyQTAuNSwwLjUsMCwwLDEsMi41LDhoNkEwLjUsMC41LDAsMCwxLDksOC42MmwtMS41LDZBMC41LDAuNSwwLDAsMSw3LDE1Wk0zLjY1LDExbDMuNzEsMEw3Ljg2LDlIMy4xNFoiLz4KPC9zdmc+Cg=="
+        "iconUrl": "https://www.gnu.org/graphics/bold_initiative_gnu_head.svg"
       }
         }
     },
@@ -44,7 +44,8 @@
             "pwsid": "CA3301055",
             "marker-color": "#18bc2e",
             "icon": {
-        "iconUrl": "drinking-water-15.svg"
+        "iconUrl": "drinking-water-15.svg",
+        "iconSize": [50,50]
         }
     }
     }
