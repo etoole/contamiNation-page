@@ -46,7 +46,10 @@
         "properties": {
             "title": "VILLAGE OF CHILD HELP",
             "pwsid": "CA3301055",
-            "marker-color": "#18bc2e"
+            "icon": {
+        "iconUrl": "drinking-water-15.svg",
+        "iconSize": [50,50]
+      }
     }
     }
  ]
