@@ -44,11 +44,13 @@
 	      
 	var map = L.mapbox.map('map', 'mapbox.streets-satellite')
   	.setView([39.8283, -98.5795], 3);
-	
+    
 	var featureLayer = L.mapbox.featureLayer()
-  	.addTo(map);
+    	.loadURL('markers.json')
+    	.addTo(map);
 
-	featureLayer.loadURL('markers.json');
+    	map.scrollWheelZoom.disable();
+    
       </script>
 
   </div>
