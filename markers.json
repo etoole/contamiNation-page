@@ -1,4 +1,4 @@
-    {
+[    {
         "type": "Feature",
         "geometry": {
             "type": "Point",
@@ -46,4 +46,4 @@
             "icon": {
         "iconUrl": "drinking-water-15.svg"
         }
-    }
+    }]
