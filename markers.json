@@ -10,7 +10,11 @@
         "properties": {
             "title": "RIVERDALE ESTATES",
             "pwsid": "CA3301040",
-            "marker-color": "#18bc2e"
+            ,
+            "icon": {
+        "iconUrl": "drinking-water-15.svg",
+        "iconSize": [50,50]
+      }
         }
     },
     {
@@ -26,7 +30,8 @@
             "title": "BLYTHE MOBILE HOME ESTATES",
             "pwsid": "CA3301045",
             "icon": {
-        "iconUrl": "https://www.gnu.org/graphics/bold_initiative_gnu_head.svg"
+        "iconUrl": "drinking-water-15.svg",
+        "iconSize": [50,50]
       }
         }
     },
