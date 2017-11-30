@@ -12,7 +12,7 @@
             "pwsid": "CA3301040",
             "icon": {
         "iconUrl": "drinking-water-15.svg",
-        "iconSize": [50,50]
+        "iconSize": [15,15]
       }
         }
     },
@@ -30,7 +30,7 @@
             "pwsid": "CA3301045",
             "icon": {
         "iconUrl": "drinking-water-15.svg",
-        "iconSize": [50,50]
+        "iconSize": [15,15]
       }
         }
     },
@@ -48,7 +48,7 @@
             "pwsid": "CA3301055",
             "icon": {
         "iconUrl": "drinking-water-15.svg",
-        "iconSize": [50,50]
+        "iconSize": [15,15]
       }
     }
     }
