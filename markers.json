@@ -11,9 +11,8 @@
         "properties": {
             "title": "RIVERDALE ESTATES",
             "pwsid": "CA3301040",
-            "marker-color": "#18bc2e",
             "icon": {
-        "iconUrl": "drinking-water-15.svg"
+        "iconUrl": "https://github.com/etoole/contamiNation-page/blob/gh-pages/drinking-water-15.svg"
       }
         }
     },
@@ -29,9 +28,8 @@
         "properties": {
             "title": "BLYTHE MOBILE HOME ESTATES",
             "pwsid": "CA3301045",
-            "marker-color": "#18bc2e",
             "icon": {
-        "iconUrl": "drinking-water-15.svg"
+        "iconUrl": "https://github.com/etoole/contamiNation-page/blob/gh-pages/drinking-water-15.svg"
       }
         }
     },
