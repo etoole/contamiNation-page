@@ -45,3 +45,7 @@
 // Vendor
 @import
   'vendor/syntax-highlighting';
+
+.c-header__title {
+  line-height: 0;
+}
