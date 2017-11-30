@@ -18,7 +18,6 @@
   <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
 </head>
 
-
   <body>
     <nav class="c-navigation is-fixed">
   <div class="c-navigation__container u-container">
@@ -49,8 +48,7 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiZXRvb2xlIiwiYSI6ImNqOXhneGhiMDgxd3MzMnM0MWtqZ
   		var marker = e.layer,
     		feature = marker.feature;
  		marker.setIcon(L.icon(feature.properties.icon));})
-    	.addTo(map);
-	     
+    	.addTo(map);   
 	      
       </script>
 
