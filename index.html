@@ -47,6 +47,7 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiZXRvb2xlIiwiYSI6ImNqOXhneGhiMDgxd3MzMnM0MWtqZ
   	.on('layeradd', function(e) {
   		var marker = e.layer,
     		feature = marker.feature;
+		marker.on('click', function(){console.log(marker)};
  		marker.setIcon(L.icon(feature.properties.icon));})
     	.addTo(map);   
 	      
