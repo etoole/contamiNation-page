@@ -17,10 +17,7 @@
   <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
   <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
 	  
-	  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-  <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
-  <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
-  <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
+	  
 <body>
 	
 </head>
@@ -47,36 +44,16 @@
  L.mapbox.accessToken = 'pk.eyJ1IjoiZXRvb2xlIiwiYSI6ImNqOXhneGhiMDgxd3MzMnM0MWtqZ3BpMzEifQ.g1OtFeVOLGfArIgHc_ymqg'
 	      
  	var map = L.mapbox.map('map', 'mapbox.streets-satellite')
-   	.setView([39.8283, -98.5795], 3);
-	          baseLayer.addTo(map);
-    markers.addTo(map);
-  });
-    
-	      
-	var markers = L.markerClusterGroup();
+   	.setView([39.8283, -98.5795], 3);    
 
-	      
-	       $.getJSON("test_markers.json", function(data) {
-    var geojson = L.geoJson(data, {
-      onEachFeature: function (feature, layer) {
-        // USE A CUSTOM MARKER
-        layer.setIcon(L.mapbox.marker.icon({'marker-symbol': 'circle-stroked', 'marker-color': '59245f'}));
-
-        // ADD A POPUP WITH A CHART
-        layer.bindPopup("<h1>" + feature.properties.name + "</h1>");
-
-      }
-    });
-    markers.addLayer(geojson);
 		       
-		       
-//  	var featureLayer = L.mapbox.featureLayer()
-//      	.loadURL('test_markers.json')
-//    	.on('layeradd', function(e) {
-//    		var marker = e.layer,
-//      		feature = marker.feature;
-//   		marker.setIcon(L.icon(feature.properties.icon));})
-//      	.addTo(map);   
+ 	var featureLayer = L.mapbox.featureLayer()
+     	.loadURL('test_markers.json')
+   	.on('layeradd', function(e) {
+   		var marker = e.layer,
+     		feature = marker.feature;
+  		marker.setIcon(L.icon(feature.properties.icon));})
+     	.addTo(map);   
 	      
       </script>
 
