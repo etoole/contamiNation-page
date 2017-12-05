@@ -55,10 +55,9 @@
   		marker.setIcon(L.icon(feature.properties.icon));})
      	.addTo(map);   
 	      
-	 var markers = new L.MarkerClusterGroup();     
-	      
-	      
-markers.addLayer(marker));
+	 var markers = new L.MarkerClusterGroup();           
+
+markers.addLayer(L.marker([175.3107, -37.7784]));
 // add more markers here...
 
 map.addLayer(markers);
