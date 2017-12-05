@@ -16,7 +16,8 @@
   <link rel="alternate" type="application/rss+xml" title="contamiNation" href="http://etoole.github.io/contamiNation-page/feed.xml">
   <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
   <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
-	  
+	      <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+	      <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js'></script>
 	  
 <body>
 	
@@ -45,7 +46,6 @@
 	      
  	var map = L.mapbox.map('map', 'mapbox.streets-satellite')
    	.setView([39.8283, -98.5795], 3);    
-
 		       
  	var featureLayer = L.mapbox.featureLayer()
      	.loadURL('test_markers.json')
@@ -54,6 +54,16 @@
      		feature = marker.feature;
   		marker.setIcon(L.icon(feature.properties.icon));})
      	.addTo(map);   
+	      
+	 var markers = new L.MarkerClusterGroup();     
+	      
+	      
+markers.addLayer(marker));
+// add more markers here...
+
+map.addLayer(markers);
+	      
+	      
 	  </script>
   </div>
 </article>
