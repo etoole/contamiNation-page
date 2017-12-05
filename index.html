@@ -58,7 +58,7 @@
 	      
 	 var markers = new L.MarkerClusterGroup();           
 
-markers.addLayer(L.marker(feature.properties.icon));
+markers.addLayer(L.marker(feature.geometry.coordinates));
 // add more markers here...
 
 map.addLayer(markers);
