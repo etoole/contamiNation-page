@@ -35,20 +35,20 @@
 
   <div class="c-article__main">
     <div id="map"></div>
-      <script>
+      <script src=map.js>
 	      
-L.mapbox.accessToken = 'pk.eyJ1IjoiZXRvb2xlIiwiYSI6ImNqOXhneGhiMDgxd3MzMnM0MWtqZ3BpMzEifQ.g1OtFeVOLGfArIgHc_ymqg'
+// L.mapbox.accessToken = 'pk.eyJ1IjoiZXRvb2xlIiwiYSI6ImNqOXhneGhiMDgxd3MzMnM0MWtqZ3BpMzEifQ.g1OtFeVOLGfArIgHc_ymqg'
 	      
-	var map = L.mapbox.map('map', 'mapbox.streets-satellite')
-  	.setView([39.8283, -98.5795], 3);
+// 	var map = L.mapbox.map('map', 'mapbox.streets-satellite')
+//   	.setView([39.8283, -98.5795], 3);
     
-	var featureLayer = L.mapbox.featureLayer()
-    	.loadURL('test_markers.json')
-  	.on('layeradd', function(e) {
-  		var marker = e.layer,
-    		feature = marker.feature;
- 		marker.setIcon(L.icon(feature.properties.icon));})
-    	.addTo(map);   
+// 	var featureLayer = L.mapbox.featureLayer()
+//     	.loadURL('test_markers.json')
+//   	.on('layeradd', function(e) {
+//   		var marker = e.layer,
+//     		feature = marker.feature;
+//  		marker.setIcon(L.icon(feature.properties.icon));})
+//     	.addTo(map);   
 	      
       </script>
 
