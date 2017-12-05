@@ -55,6 +55,9 @@
   		marker.setIcon(L.icon(feature.properties.icon));})
      	.addTo(map);   
 	      
+	      var markers = L.markerClusterGroup();
+		markers.addLayer(L.marker(marker));
+		map.addLayer(markers);
       </script>
 
   </div>
