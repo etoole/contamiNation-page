@@ -16,10 +16,16 @@
   <link rel="alternate" type="application/rss+xml" title="contamiNation" href="http://etoole.github.io/contamiNation-page/feed.xml">
   <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
   <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
-<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
-  <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
-  <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
 	  
+	  
+<!-- <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
+  <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
+  <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' /> -->
+	  
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/leaflet.markercluster.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.css' rel='stylesheet' />
+  <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.Default.css' rel='stylesheet' />
+	  	  
 <body>
 	
 </head>
@@ -41,7 +47,73 @@
 
   <div class="c-article__main">
     <div id="map"></div>
-      <script>
+	        <script>
+            
+        L.mapbox.accessToken = 'pk.eyJ1IjoiZXRvb2xlIiwiYSI6ImNqOXhneGhiMDgxd3MzMnM0MWtqZ3BpMzEifQ.g1OtFeVOLGfArIgHc_ymqg'
+
+        var markers = new L.MarkerClusterGroup();
+
+        var map = L.mapbox.map('map', 'mapbox.streets-satellite')
+          .setView([39.8283, -98.5795], 3);    
+
+
+        // let's download the geojson directly
+        var request = new XMLHttpRequest();
+        request.open('GET', 'test_markers.json', true);
+
+        // This is running async, so all the code need to go in this function, that runs after the data is loaded
+        request.onload = function() {
+          if (this.status >= 200 && this.status < 400) {
+            // Success!
+            var data = JSON.parse(this.response);
+
+            // this is the obect that will process the data below
+            var locations = L.geoJson(null, {
+              onEachFeature: function (feature, layer) {
+
+                // set icon
+                layer.setIcon(L.icon(feature.properties.icon))
+
+                // you can put whatever HMTL you want here
+                layer.bindPopup("<strong>" + feature.properties.description + "</strong><br/><span>" + feature.properties.title + '</span>').openPopup();
+
+                // want to do custom events on click:
+                layer.on('click', function(e) {
+                  console.log('you clicked me',e)
+                })
+
+
+                markers.addLayer(layer);
+                
+              }
+            });
+
+            locations.addData(data);
+            map.addLayer(markers);
+
+
+
+          } else {
+            // We reached our target server, but it returned an error
+
+          }
+        };
+
+        request.onerror = function() {
+          // There was a connection error of some sort
+        };
+
+
+        // send the ajax request
+        request.send();        
+        	      
+	      
+	  </script>
+	  
+	  
+	  
+	  
+<!--       <script>
 	      
  L.mapbox.accessToken = 'pk.eyJ1IjoiZXRvb2xlIiwiYSI6ImNqOXhneGhiMDgxd3MzMnM0MWtqZ3BpMzEifQ.g1OtFeVOLGfArIgHc_ymqg'
 	      
@@ -64,7 +136,7 @@ markers.addLayer(L.marker(feature.geometry.coordinates));
 map.addLayer(markers);
 	      
 	      
-	  </script>
+	  </script> -->
   </div>
 </article>
 
