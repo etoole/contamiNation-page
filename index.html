@@ -52,7 +52,7 @@
 
   <div class="c-article__main">
     <div id="map"></div>
-	  <div id="results">
+/* 	  <div id="results">
 		  <span> + pwsname + " - " + compliancestatus + " - " + serviceconnections + </span>
 		<span> + </span>
 	  	<tr>
@@ -111,7 +111,7 @@
 			<td> + samplingendddate + </td>
 		</tr>				  
 		  
-	  </div>
+	  </div> */
 	        <script>
             
         L.mapbox.accessToken = 'pk.eyJ1IjoiZXRvb2xlIiwiYSI6ImNqOXhneGhiMDgxd3MzMnM0MWtqZ3BpMzEifQ.g1OtFeVOLGfArIgHc_ymqg'
@@ -146,7 +146,7 @@
                 layer.on('click', function(e) {
 			
 
-		var request = new XMLHttpRequest();
+/* 		var request = new XMLHttpRequest();
 		request.open('GET', '/results/' + e.target.feature.properties.pwsid+ '.json', true);
 
 		request.onload = function() {
@@ -163,7 +163,7 @@
 		  // There was a connection error of some sort
 		};
 
-		request.send();
+		request.send(); */
 
 
                   console.log('you clicked me',e)
