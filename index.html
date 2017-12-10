@@ -65,6 +65,7 @@
 
   <div class="c-article__main">
     <div id="map"></div>
+	  <div id="key"><div>
 	        <script>
             
         L.mapbox.accessToken = 'pk.eyJ1IjoiZXRvb2xlIiwiYSI6ImNqOXhneGhiMDgxd3MzMnM0MWtqZ3BpMzEifQ.g1OtFeVOLGfArIgHc_ymqg'
@@ -97,26 +98,6 @@
 
                 // want to do custom events on click:
                 layer.on('click', function(e) {
-			
-
-/* 		var request = new XMLHttpRequest();
-		request.open('GET', '/results/' + e.target.feature.properties.pwsid+ '.json', true);
-
-		request.onload = function() {
-		  if (request.status >= 200 && request.status < 400) {
-		    // Success!
-		    var data = JSON.parse(request.responseText);
-		  } else {
-		    // We reached our target server, but it returned an error
-
-		  }
-		};
-
-		request.onerror = function() {
-		  // There was a connection error of some sort
-		};
-
-		request.send(); */
 
 
                   console.log('you clicked me',e)
