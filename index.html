@@ -81,7 +81,7 @@
                 layer.setIcon(L.icon(feature.properties.icon))
 
                 // you can put whatever HMTL you want here
-                layer.bindPopup("<strong>" + feature.properties.name + "</strong><span> - " + feature.properties.address + "</br>" + feature.properties.compliancestatus + "</br>"+ feature.properties.contactname + " - " +feature.properties.contactphone + " - " + feature.properties.contactemail + "</br>" + feature.properties.results[0].concentration + " " + feature.properties.results[0].contaminant + " during sampling completed on " + feature.properties.results[0].enddate + "</span>").openPopup();
+                layer.bindPopup("<strong>" + feature.properties.name + "</strong><span style="font-size:80%"> - " + feature.properties.address + "</br>Population: "+feature.properties.populationserved + "/" + feature.properties.compliancestatus + "</br>"+ feature.properties.contactname + " - " +feature.properties.contactphone + " - " + feature.properties.contactemail + "</br>" + feature.properties.results[0].concentration + " " + feature.properties.results[0].contaminant + " during sampling completed on " + feature.properties.results[0].enddate + "</span>").openPopup();
 
                 // want to do custom events on click:
                 layer.on('click', function(e) {
