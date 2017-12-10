@@ -53,66 +53,6 @@
 
   <div class="c-article__main">
     <div id="map"></div>
- 	  <div id="results">
-		  <span> + pwsname + " - " + compliancestatus + " - " + serviceconnections + </span>
-		<span> + </span>
-	  	<tr>
-			<td>Analyte</td>
-			<td>Concentration</td>
-			<td>Sampling End Date</td>
-		</tr>
-	  	<tr>
-			<td> + contaminant + </td>
-			<td> + concentration + </td>
-			<td> + samplingendddate + </td>
-		</tr>
-	  	<tr>
-			<td> + contaminant + </td>
-			<td> + concentration + </td>
-			<td> + samplingendddate + </td>
-		</tr>		
-	  	<tr>
-			<td> + contaminant + </td>
-			<td> + concentration + </td>
-			<td> + samplingendddate + </td>
-		</tr>		  
-	  	<tr>
-			<td> + contaminant + </td>
-			<td> + concentration + </td>
-			<td> + samplingendddate + </td>
-		</tr>
-	  	<tr>
-			<td> + contaminant + </td>
-			<td> + concentration + </td>
-			<td> + samplingendddate + </td>
-		</tr>		  
-	  	<tr>
-			<td> + contaminant + </td>
-			<td> + concentration + </td>
-			<td> + samplingendddate + </td>
-		</tr>
-	  	<tr>
-			<td> + contaminant + </td>
-			<td> + concentration + </td>
-			<td> + samplingendddate + </td>
-		</tr>		
-	  	<tr>
-			<td> + contaminant + </td>
-			<td> + concentration + </td>
-			<td> + samplingendddate + </td>
-		</tr>		  
-	  	<tr>
-			<td> + contaminant + </td>
-			<td> + concentration + </td>
-			<td> + samplingendddate + </td>
-		</tr>
-	  	<tr>
-			<td> + contaminant + </td>
-			<td> + concentration + </td>
-			<td> + samplingendddate + </td>
-		</tr>				  
-		  
-	  </div>
 	        <script>
             
         L.mapbox.accessToken = 'pk.eyJ1IjoiZXRvb2xlIiwiYSI6ImNqOXhneGhiMDgxd3MzMnM0MWtqZ3BpMzEifQ.g1OtFeVOLGfArIgHc_ymqg'
@@ -125,7 +65,7 @@
 
         // let's download the geojson directly
         var request = new XMLHttpRequest();
-        request.open('GET', 'all_markers.json', true);
+        request.open('GET', 'test_markers.json', true);
 
         // This is running async, so all the code need to go in this function, that runs after the data is loaded
         request.onload = function() {
@@ -141,7 +81,7 @@
                 layer.setIcon(L.icon(feature.properties.icon))
 
                 // you can put whatever HMTL you want here
-                layer.bindPopup("<strong>" + feature.properties.description + "</strong><br/><span>" + feature.properties.title + '</span>').openPopup();
+                layer.bindPopup("<strong>" + feature.properties.description + "</strong><span> - " + feature.properties.title + "</span></br><span>" + feature.properties.contactname + " - " +feature.properties.contactphone + " - " + feature.properties.contactemail + "</span></br><tr><th>Analyte</th><th>Concentration</th><th>Sampling End Date</th></tr><tr><td>" + feature.properties.results + "</td></tr>").openPopup();
 
                 // want to do custom events on click:
                 layer.on('click', function(e) {
