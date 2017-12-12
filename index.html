@@ -93,8 +93,20 @@
                 // set icon
                 layer.setIcon(L.icon(feature.properties.icon))
 
-                // you can put whatever HMTL you want here
-                layer.bindPopup("<strong>" + feature.properties.name + "</strong><span> - </br></span><span style='font-style: italic;'>" + feature.properties.address + "</span><span></br>Population: " + feature.properties.populationserved + "</br>"+ feature.properties.contactname + " ph:" +feature.properties.contactphone + " e:" + feature.properties.contactemail + "</br>------------------------</br></span><span style='font-weight: 700;'>" + feature.properties.compliancestatus +"</br>" + feature.properties.results[0].concentration + " " + feature.properties.results[0].contaminant + "</span><span> during sampling completed on " + feature.properties.results[0].enddate + "</span>").openPopup();
+
+                // build the results html
+                var sampleResultsHtml = "<span style='font-weight: 700;'>" + feature.properties.compliancestatus +"</span></br>" 
+                feature.properties.results.forEach(function(result){
+                  sampleResultsHtml = sampleResultsHtml + "<span>" + result.concentration + " " + result.contaminant + "</span><span> during sampling completed on " + result.enddate + "</span></br>"
+                })
+
+                // you can put whatever HMTL you want here                
+                layer.bindPopup("<strong>" + feature.properties.name + "</strong><span> - </br></span><span style='font-style: italic;'>" + feature.properties.address + "</span><span></br>Population: " + feature.properties.populationserved + "</br>"+ feature.properties.contactname + " ph:" +feature.properties.contactphone + " e:" + feature.properties.contactemail + "</br>------------------------</br></span>"+ sampleResultsHtml).openPopup();		      
+		      
+		      
+		      
+//                 // you can put whatever HMTL you want here
+//                 layer.bindPopup("<strong>" + feature.properties.name + "</strong><span> - </br></span><span style='font-style: italic;'>" + feature.properties.address + "</span><span></br>Population: " + feature.properties.populationserved + "</br>"+ feature.properties.contactname + " ph:" +feature.properties.contactphone + " e:" + feature.properties.contactemail + "</br>------------------------</br></span><span style='font-weight: 700;'>" + feature.properties.compliancestatus +"</br>" + feature.properties.results[0].concentration + " " + feature.properties.results[0].contaminant + "</span><span> during sampling completed on " + feature.properties.results[0].enddate + "</span>").openPopup();
 
                 // want to do custom events on click:
                 layer.on('click', function(e) {
