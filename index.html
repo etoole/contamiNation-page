@@ -97,7 +97,7 @@
                 // build the results html
                 var sampleResultsHtml = "<span style='font-weight: 700;'>" + feature.properties.compliancestatus +"</span></br>" 
                 feature.properties.results.forEach(function(result){
-                  sampleResultsHtml = sampleResultsHtml + "<span>" + result.concentration + " " + result.contaminant + "</span><span> during sampling completed on " + result.enddate + "</span></br>"
+                  sampleResultsHtml = sampleResultsHtml + "<span style='font-weight: 700;'>" + result.concentration + " " + result.contaminant + "</span><span> during sampling completed on " + result.enddate + "</span></br>"
                 })
 
                 // you can put whatever HMTL you want here                
